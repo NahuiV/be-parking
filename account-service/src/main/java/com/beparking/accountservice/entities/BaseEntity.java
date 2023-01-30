@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @Getter
 @Setter
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor()
+@NoArgsConstructor()
 public abstract class BaseEntity {
 
     @CreatedDate

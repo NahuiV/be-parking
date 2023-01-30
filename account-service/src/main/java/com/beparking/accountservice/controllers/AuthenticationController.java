@@ -11,4 +11,18 @@ public class AuthenticationController {
     public AuthenticationController (AuthenticationService authenticationService) {
         this.authenticationService = authenticationService;
     }
+
+    public void register(){
+
+    }
+
+    public void login () {
+
+    }
+
+    public void logout(){
+
+    }
+
+    public Boolean validateToken(){return true;}
 }
