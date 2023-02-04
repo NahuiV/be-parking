@@ -1,9 +1,12 @@
 package com.beparking.accountservice.controllers;
 
+import com.beparking.accountservice.dtos.RegisterDTO;
 import com.beparking.accountservice.services.AuthenticationService;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(path = "api/v1/authentication/")
 public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
@@ -12,9 +15,12 @@ public class AuthenticationController {
         this.authenticationService = authenticationService;
     }
 
-    public void register(){
-
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void register(@RequestBody RegisterDTO request){
+        authenticationService.register(request);
     }
+
 
     public void login () {
 
